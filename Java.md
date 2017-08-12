@@ -63,10 +63,10 @@ public class Human {
 }
 
 Human person1 = new Human();
-person1.sayHi() // Hello, my name is John Smith
+person1.sayHi(); // Hello, my name is John Smith
 
 Human person2 = new Human("Ong eiei");
-person2.sayHi() // Hello, my name is Ong eiei 
+person2.sayHi(); // Hello, my name is Ong eiei 
 ```
 
 ### extends
@@ -100,9 +100,9 @@ public class Hero extends Human {
 }
 
 Hero hero = new Hero("eiei","Fire balls");
-hero.sayHi() //Hi, my name is eiei. I am Hero
-hero.usePower() // eiei use his/her power : Fire balls
-hero.HumanSayHi() // Hello, my name is eiei 
+hero.sayHi(); //Hi, my name is eiei. I am Hero
+hero.usePower(); // eiei use his/her power : Fire balls
+hero.HumanSayHi(); // Hello, my name is eiei 
 ``` 
 
 ### getter & setter
@@ -193,7 +193,7 @@ System.out.println(person1.name); // eiei
 System.out.println(person2.name); // eiei
 
 // ฟังก์ชั่น static
-Human.sayHi() // Hello, my name is John Smith
+Human.sayHi(); // Hello, my name is John Smith
  
 ```
 
@@ -230,3 +230,14 @@ abstract method เป็นฟังก์ชั่นที่ระบุเ�
 ## build in function
 
 # compiler
+การคอมไฟล์ภาษา java จำเป็นจะต้องอาศัย jdk ซึ่งเป็นตัวที่ทำให้คอมเราสามารถอ่านภาษา java ได้รู้เรื่อง โดยปกติแล้วเราจะ compile ไฟล์ java ภายใน text editor ของเรา แต่ถ้าเราอยาก compile มันจาก cmd หละ หากเราลองเข้าไปในไฟล์งานของเรา จะเห็นว่าไฟล์ที่เราเขียนขึ้นมามีนามกุลเป็น .java ซึ่งปกติแล้ว window ไม่สามารถอ่านไฟล์ .java ได้ ดังนั้นเราจึงจำเป็นต้องแปลงไฟล์ .java ให้เป็น .class ที่ window สามารถอ่านได้ก่อน โดยวิธีการแปลงไฟล์นั้นต้องใช้ javac.exe ซึ่งเก็บอยู่ใน jdk1.x.x_xxx/bin โดยต้องเก็บ path นี้เอาไว้ในตัวแปร PATH ที่เป็น environment variable ของ window แล้วรันคำสั่ง javac ใน cmd 
+
+```
+C:\User\Name\Desktop>javac HelloWorld.java
+```
+แล้วจะมีไฟล์ HelloWorld.class โผล่ขึ้นมาที่ Desktop หลังจากน้ันใช้คำสั่ง java เพื่อ run ไฟล์
+```
+C:\User\Name\Desktop>java HelloWorld
+```
+>Note : ไฟล์ HelloWorld.class สามารถละ .class ทิ้งไปได้ จึงเขียนแค่ java HelloWorld
+

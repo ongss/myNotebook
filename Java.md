@@ -14,7 +14,8 @@ java เป็นภาษาที่มีจุดเด่นเกี่ย
 * ประเภทอื่นๆ <code>boolean</code> : เก็บค่าความจริง true,false
 
 >Note : การใช้ float ในการคำนวนอาจจะได้ต่าที่ผิดพลาดดั้งนั้นควรใช้ double แทน
->Note : 1 byte = 8 bit ซึ่ง 1 bit เก็บเลขฐานสองได้ 1 หลัก ดังนั้น short ที่มี 2 byte จึงเก็บค่าได้ 2^(2x8) =  65536 จึงสามารถเก็บค่าในช่วง [-32768,32767] 
+>Note : 1 byte = 8 bit ซึ่ง 1 bit เก็บเลขฐานสองได้ 1 หลัก ดังนั้น short ที่มี 2 byte จึงเก็บค่าได้ 2^(2x8) =  65536 จึงสามารถเก็บค่าในช่วง [-32768,32767]
+>Note : ' ' คือ c้ar สามารถเก็บอักขระได้ตัวเดียว , " " คือ Stirng สามารถเก็บอักขระได้กี่ตัวก็ได้
 
 ตัวอย่างการใช้งาน
 ```
@@ -26,11 +27,65 @@ double d = 9.999; //จำนวนจริงส่วนใหญ่นิย
 
 char e = 'a'; 
 String f = "Hello"; //ตัวอักษรที่เป็น string จะต้องอยู่ใน " " เท่านั้น ถ้าอยู่ใน ' ' จะเกิด error
-int g = 'c'-'a'; // char สามารถบอกระยะห่างของตัวอักษรได้ด้วยนะ g = 2 
+int g = 'c'-'a'; // char สามารถบอกระยะห่างของตัวอักษรได้ด้วยนะ g = 2
+int h = 'a'+'a'; // h = 194
 
-boolean h = true
+boolean h = true;
 
 ```
+
+การเปลี่ยนชนิดของตัวแปร
+```
+//เปลียนเป็น String
+String a = Integer.toString(2);
+String b = Double.toString(2.3);
+String c = Boolean.toString(true);
+
+a = "" + 3; // a = "3"  
+b = "" + true;// b = "true"
+
+//เปลียนตัวแปร  char <--> int <--> double (วิธีนี้ใข้กับ String ไม่ได้)
+int x = (int) 2.3;
+double y = (double) 2;
+char w = (char) 97; //w = 'a';
+int z = (int) 'a'; //z = 97;
+
+//เปลี่ยน String เป็นตัวเลข
+int i = Integer.parseInt("12");
+double j = double.parseDouble("12.2");
+
+```
+
+## operator
+```
+//operator เกี่ยวกับการคำนวนเลขใช้ + - * / % Math.pow(base,exponent)
+// and --> && , or --> || , นิเสธ(~) --> !
+
+
+//ตัวอย่าง
+if( 2 + 3 == 5 || !(Math.pow(2,3) == 8)){
+	System.out.println("Hello");
+} else{
+	System.out.println("World");
+}
+
+
+//loop
+int n = 10;
+while(n>0){
+	System.out.printf(n);
+	n-=1;
+} // 10,9,8,7,6,5,4,3,2,1
+
+for(int i=10;i>0;i--){
+	System.out.printf(i);
+} // 10,9,8,7,6,5,4,3,2,1
+```
+
+>Note : ใน if else ต้องใช้ == 
+>Note : while() จะทำงานไปเรื่อยๆถ้าค่าใน () ยังเป็นจริง
+>Note : for(start,stop,step)
+
 ## data structure
 
 ## functions

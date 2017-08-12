@@ -38,6 +38,7 @@ public class Human {
 	}
 }
 
+// สร้างตัวแปร person ที่เป็นชนิด Human แล้วสร้าง new Human ใส่ลงไปใน person
 Human person = new Human();
 ```
 
@@ -112,6 +113,7 @@ hero.HumanSayHi(); // Hello, my name is eiei
 public class Human {
 	String name = "John Smith";
 	double weight = "50.5";
+	// weight ไม่สามรถน้อยกว่า 0 ได้นะ
 	public void setWeight(double weight){
 		if(weight<0){
 			this.weight 0;

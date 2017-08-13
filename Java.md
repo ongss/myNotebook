@@ -88,7 +88,44 @@ for(int i=10;i>0;i--){
 
 >Note : while() จะทำงานไปเรื่อยๆถ้าค่าใน () ยังเป็นจริง
 
->Note : for(start,stop,step)
+>Note : for(start,stop,step
+
+## main
+main เป็นฟังก์ชั่นที่ใช้เขียนโค้ดในโปรแกรม โดยที่โปรแกรมจะเรื่มทำงานที่ในฟังก์ชั่น main ในภาษา java ฟังก์ชั่น main ต้องประกาศอยู่ใน class 
+```java
+public class HelloWorld{
+	public static void main(String[] args){
+		//program start here!! 
+	}
+}
+```
+โดยพารามิเตอร์ของ main จะเป็นเป็น array ของ String ที่เรียกว่า agrs โดย agrs จะได้มาจากการสั่งรัน java file จาก cmd
+```cmd
+C:\User\Name\Desktop>java HelloWorld myname myage
+```
+คำสั่งนี้เป็นการรันไฟล์ HelloWorld.class โดยมี args = ["myname","myage"] 
+
+## input & output
+```java
+import java.util.Scanner;
+
+public class HelloWorld{
+	public static viod main(String[] agrs){
+		
+		//การรับ input แบบต่างๆ
+		Scanner sc = new Scanner();
+		int a = sc.nextInt(); //รับ input ตัวถัดไปโดยต้องเป็น int เท่านั้น
+		double b = sc.nextDouble(); //รับ input ตัวถัดไปโดยต้องเป็น double เท่านั้น
+		String c = sc.next(); //รับ input ตัวถัดไปโดยต้องเป็น String
+		String d = sc.nextln(); //รับ input โดยต้องเป็น String ไปจนจบบรรทัด
+		//สมมุติรับ input มาเป็น 124 55.2 Hello my name is ong --> a = 124,b = 55.2,c = "Hello",d = "my name is ong"
+		
+		//การแสดง output แบบต่างๆ
+		System.out.print("Hello"); //print Hello
+		System.out.println("Hello"); //print Hello แล้วก็ขึ้นบรรทัดใหม่
+	}
+}
+```
 
 ## data structure
 
@@ -123,7 +160,7 @@ public class Human {
 Human person = new Human();
 ```
 
-> Note : การตั้งชื่อ class ควรขึ้นต้นด้วยตัวพิมพ์ใหญ่เสมอ
+>Note : การตั้งชื่อ class ควรขึ้นต้นด้วยตัวพิมพ์ใหญ่เสมอ
 
 >Note :  Integer String Scanner ก็เป็น class เหมือนกันนะ แต่มันถูก build in มาพร้อมกับ java แล้ว 
 ### constructor
@@ -187,7 +224,9 @@ Hero hero = new Hero("eiei","Fire balls");
 hero.sayHi(); //Hi, my name is eiei. I am Hero
 hero.usePower(); // eiei use his/her power : Fire balls
 hero.HumanSayHi(); // Hello, my name is eiei 
-``` 
+```
+
+> Note : Hero extends Human มาเพราะงั้น Hero เป็น subclass ของ Human
 
 ### getter & setter
 เป็น pattern การเขียน class รูปแบบหนึ่งที่ใช้สำหรับการรับ หรือ แก้ไขค่าตัวแปรให้มีความเหมาะสมกับการใช้งาน
@@ -199,7 +238,7 @@ public class Human {
 	// weight ไม่สามรถน้อยกว่า 0 ได้นะ
 	public void setWeight(double weight){
 		if(weight<0){
-			this.weight 0;
+			this.weight = 0;
 		}
 		else{
 			this.weight = weight;
@@ -331,7 +370,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.131-b11, mixed mode)
 C:\User\Name\Desktop>javac HelloWorld.java
 ```
 แล้วจะมีไฟล์ HelloWorld.class โผล่ขึ้นมาที่ Desktop หลังจากน้ันใช้คำสั่ง java เพื่อรันไฟล์
-```terminal
+```cmd
 C:\User\Name\Desktop>java HelloWorld
 ```
 >Note : ไฟล์ HelloWorld.class สามารถละ .class ทิ้งไปได้ จึงเขียนแค่ java HelloWorld

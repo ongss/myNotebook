@@ -88,7 +88,7 @@ for(int i=10;i>0;i--){
 
 >Note : while() จะทำงานไปเรื่อยๆถ้าค่าใน () ยังเป็นจริง
 
->Note : for(start,stop,step
+>Note : for(start,stop,step)
 
 ## main
 main เป็นฟังก์ชั่นที่ใช้เขียนโค้ดในโปรแกรม โดยที่โปรแกรมจะเรื่มทำงานที่ในฟังก์ชั่น main ในภาษา java ฟังก์ชั่น main ต้องประกาศอยู่ใน class 
@@ -158,7 +158,8 @@ System.out.println(Arrays.deepToString(x)); // [[1,2,3],[4,5,6],[7,8,9]]
 
 ```
 ### List
-### class
+เป็น
+
 ### Set
 ### Map
 

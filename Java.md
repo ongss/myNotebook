@@ -14,7 +14,9 @@ java เป็นภาษาที่มีจุดเด่นเกี่ย
 * ประเภทอื่นๆ <code>boolean</code> : เก็บค่าความจริง true,false
 
 >Note : การใช้ float ในการคำนวนอาจจะได้ต่าที่ผิดพลาดดั้งนั้นควรใช้ double แทน
+
 >Note : 1 byte = 8 bit ซึ่ง 1 bit เก็บเลขฐานสองได้ 1 หลัก ดังนั้น short ที่มี 2 byte จึงเก็บค่าได้ 2^(2x8) =  65536 จึงสามารถเก็บค่าในช่วง [-32768,32767]
+
 >Note : ' ' คือ char สามารถเก็บอักขระได้ตัวเดียว , " " คือ Stirng สามารถเก็บอักขระได้กี่ตัวก็ได้
 
 ตัวอย่างการใช้งาน
@@ -83,7 +85,9 @@ for(int i=10;i>0;i--){
 ```
 
 >Note : ใน if else ต้องใช้ == 
+
 >Note : while() จะทำงานไปเรื่อยๆถ้าค่าใน () ยังเป็นจริง
+
 >Note : for(start,stop,step)
 
 ## data structure
@@ -120,6 +124,7 @@ Human person = new Human();
 ```
 
 > Note : การตั้งชื่อ class ควรขึ้นต้นด้วยตัวพิมพ์ใหญ่เสมอ
+
 >Note :  Integer String Scanner ก็เป็น class เหมือนกันนะ แต่มันถูก build in มาพร้อมกับ java แล้ว 
 ### constructor
 แล้วถ้าเราต้องการสร้าง object จาก class Human ที่มีชื่อแตกต่างกันหละ!! เราสามารถทำมันได้โดยการใส่ constructor ลงไปใน class นั้นเอง constructor คือฟังก์ชั่นที่ใช้กำหนดค่าของตัวแปรในแต่ละ object ที่สร้างจาก class โดยที่ฟังก์ชั่นที่มีชื่อเดียวกับ class จะเป็น constructor 
@@ -151,6 +156,7 @@ person2.sayHi(); // Hello, my name is Ong eiei
 extends เป็นคำสั่งที่เราใช้เมื่อเราต้องการที่จะสร้าง class ใหม่ที่มีคุณสมบัติใกล้เคียงกับคลาสเดิมหรือดึงคุณสมบัติจาก class เดิมมาใช้ โดยคำสั่ง  extends จะคัดลอกคุณสมบัติของ class ที่ต้องการมา
 
 > Note : คำสั่ง extends ไม่คัดลอก constructor มาให้จึงต้องเขียนใหม่เองทุกครั้ง
+
 > Note : สามารถ extends ได้แค่ class เดียวเท่านั้น
 
 
@@ -231,6 +237,7 @@ hero instanceof Human //true
 | private | yes   |    no    |     no    |   no  |
 
 > Note : ถ้าไม่ได้เติมคำนำหน้าที่เกี่ยวกับ access modifiers เลยจะถือว่าเป็น public เสมอ
+
 > Note : access modifiers ของ class มักจะเปิดกว้างกว่าตัวแปร หรือ ฟังก์ชั่นข้างใน เพราะถ้าตัวแปร หรือ ฟังก์ชั่นข้างในเป็น public แต่ access modifiers ของ class เป็น protect ก็ไม่ต่างอะไรกับการให้ access modifiers ของตัวแปรใน class เป็น protect อยู่ดี
  
 
@@ -336,7 +343,9 @@ C:\User\Name\Desktop>java HelloWorld
 C:\User\Name\Desktop>jar cvfe MyProgram.jar HelloWorld *.class
 ```
 >Note : c หมายถึง create file, v หมายถึงให้แสดงผลทาง cmd ว่าคำสั่งนี้ทำงานนะ,f หมายถึงเราจะกำหนด file name เอง, e หมายถึงเราจะบอก main class ให้
+
 >Note : การกรอก args ก็เป็นไปตามลำดับของ option(cvfe คือ option) เช่น เราเขียน f ก่อน e จึงต้องกรอก file name ก่อน main class
+
 >Note : <code>*.class</code> เป็น args ของคำสั่ง jar ที่บอกว่าจะสร้างไฟล์ .jar จาก class ไหนบ้าง โดยปกติจะเลือก .class ทั้งหมดที่อยู่ในโฟลเดอร์น้ัน ( <code>*.class</code> ) เพราะงั้นในโฟลเดอร์ที่ทำควรมีแต่ไฟล์ .class ที่เกี่ยวข้องทำนั้นนะ
 
 รู้ป่าววว ความจริงแล้ว .jar เป็นไฟล์ zip เราจึงสามารถแตกไฟล์ได้เหมือนไฟล์ zip ปกติเลย  ข้างใน .jar จะประกอบด้วยไฟล์ .class และ โฟลเดอร์นึงที่ชื่อว่า META-INF
@@ -347,4 +356,5 @@ Created-By: 1.8.0_131 (Oracle Corporation)
 Main-Class: HelloWorld
 ```
 มันเป็นไฟล์ข้อมูลของ .jar นั้นเอง ซึ่งเราสามารถเปลี่ยน main class ของไฟล์ .jar ได้จากตรงนี้ด้วย
+
 >Note : สรุปแล้ว ลำดับการแปลงไฟล์เป็นตามนี้จ้า  .java --> .class --> .jar

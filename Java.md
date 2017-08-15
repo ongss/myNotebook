@@ -158,8 +158,33 @@ System.out.println(Arrays.deepToString(x)); // [[1,2,3],[4,5,6],[7,8,9]]
 
 ```
 >Note : เวลาการข้าถึงข้อมูลใน array ใช้ O(1) เช่น a[1] แต่ใช้เวลาในการแทรกข้อมูล O(n) ถ้าจะแทรกช่องที่ m จะต้องขยับข้อมูลช่องที่ m ถึง n ไปหนึ่งช่อง
-### List
-เป็น
+### ArrayList
+เป็นการเก็บข้อมูลที่คล้าย array แต่สามารถขยายขนาดได้
+```java
+import java.util.ArrayList;
+
+public class HelloWorld{
+	public static void main(String[] agrs){
+		ArrayList<Integer> a = new ArrayList<>(); //ประกาศ arraylist ชื่อ a เก็บข้อมูลประเภท Integer
+		a.add(2); //ใส่ข้อมูล 2 ต่อท้าย arraylist
+		a.add(0,1); //ใส่ข้อมูล 1 แทรกที่ arraylist ช่องที่ 0
+		a.set(1,3); //set ข้อมูลช่องที่ 1 ให้เป็นค่า 3
+		a.get(1); //เรียกดูข้อมูลช่องที่ 1
+		a.remove(1); //ลบข้อมูลตำแหน่งที่ 1 ของ a
+		
+		List<Integer> b = Arrays.asList(1,2,3,4); //ประกาศ list ตั้งแต่ 1 ถึง 4
+		a.addAll(b); //เอา list b มาต่อหลัง list a
+		a.addAll(0,b); //เอา list b มาแทรกตำแหน่งที่ 0 
+		
+		//เรีนกดูจ้อมูลั้งหมดใน list
+		for(Integer x : a){
+			System.out.print(x+" ");
+		}
+	}
+}
+```
+>Note : สังเกตว่าตอนประกาศ ArrayList ประกาศเป็น Integer ไม่ใช่ int เพราะใน <> ต้องใส่ class เท่านั้น
+>Note : เราสามารถประกาศ <code>List<Integer> a = new ArrayList<>();</code> ได้ เพราะ ArrayList ก็ถือเป็น List คล้ายๆกับ <code>double x = 3;</code> 3 ที่เป็นจำนวนเต็มก็ถือว่าเป็นจำนวนเต็มเช่นกัน
 
 ### Set
 ### Map

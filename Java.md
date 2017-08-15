@@ -184,6 +184,7 @@ public class HelloWorld{
 }
 ```
 >Note : สังเกตว่าตอนประกาศ ArrayList ประกาศเป็น Integer ไม่ใช่ int เพราะใน <> ต้องใส่ class เท่านั้น
+
 >Note : เราสามารถประกาศ <code>List<Integer> a = new ArrayList<>();</code> ได้ เพราะ ArrayList ก็ถือเป็น List คล้ายๆกับ <code>double x = 3;</code> 3 ที่เป็นจำนวนเต็มก็ถือว่าเป็นจำนวนเต็มเช่นกัน
 
 ### Set

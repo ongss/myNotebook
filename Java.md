@@ -158,10 +158,12 @@ System.out.println(Arrays.deepToString(x)); // [[1,2,3],[4,5,6],[7,8,9]]
 
 ```
 >Note : เวลาการข้าถึงข้อมูลใน array ใช้ O(1) เช่น a[1] แต่ใช้เวลาในการแทรกข้อมูล O(n) ถ้าจะแทรกช่องที่ m จะต้องขยับข้อมูลช่องที่ m ถึง n ไปหนึ่งช่อง
+
 ### ArrayList
-เป็นการเก็บข้อมูลที่คล้าย array แต่สามารถขยายขนาดได้
+เป็น sub class ของ Listที่มีรูปแบบการเก็บข้อมูลที่คล้าย array แต่สามารถขยายขนาดได้
 ```java
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class HelloWorld{
 	public static void main(String[] agrs){
@@ -186,6 +188,68 @@ public class HelloWorld{
 >Note : สังเกตว่าตอนประกาศ ArrayList ประกาศเป็น Integer ไม่ใช่ int เพราะใน <> ต้องใส่ class เท่านั้น
 
 >Note : เราสามารถประกาศ <code>List<Integer> a = new ArrayList<>();</code> ได้ เพราะ ArrayList ก็ถือเป็น List คล้ายๆกับ <code>double x = 3;</code> 3 ที่เป็นจำนวนเต็มก็ถือว่าเป็นจำนวนเต็มเช่นกัน
+
+### List
+เป็นการเก็บข้อมูลที่ไม่จำเป็นต้องรู้จำนวนข้อมูลที่แน่นอนเพราะภายใน 1 ช่องของ list จะประกอบไปด้วยสองส่วนคือ ข้อมูลในช่องนั้น และ pointer ที่ชี้ไปที่ list ช่องถัดไป และยังจำเป็นต้องมี pointer ที่ชี้ไปที่ช่องแรกของ list ด้วย นอกจากนี้ List ยังถือเป็น super class ของ ArrayList
+
+>Note : เนื่องจาก List เป็น super class ของ ArrayList ดังนั้น syntax การรับข้อมูลเข้าของ ArrayList จึงเหมือนกับ List 
+
+```
+import java.util.List;
+
+public class HelloWorld{
+	public static void main(){
+		List<Integer> myList = new List<>();
+		a.add(2); //ใส่ข้อมูล 2 ต่อท้าย list
+		a.add(0,1); //ใส่ข้อมูล 1 แทรกที่ list ช่องที่ 0
+		a.set(1,3); //set ข้อมูลช่องที่ 1 ให้เป็นค่า 3
+		a.get(1); //เรียกดูข้อมูลช่องที่ 1
+		a.remove(1); //ลบข้อมูลตำแหน่งที่ 1 ของ a
+	}
+}
+```
+>Note : เวลาในการเข้าถึงข้อมูลใน List ใช้ O(n) เนื่องจากต้องไล่วิ่ิงไปทีละช่องๆจนกว่าจะถึงข้อมูลที่ต้องการ แต่สามารถแทรกช่องใหม่ได้เร็ว O(1)เนื่องจากแค่เปลี่ยน pointer เท่านั้น
+
+join & split
+```java
+import java.util.List;
+import java.util.Arrays;
+
+public class HelloWorld{
+	public static void main(){
+		String s = "a bb ccc dddd";
+		String[] array =  s.split(" "); //สร้าง array ["a","bb","ccc","dddd"]
+		List<String> list = Arrays.aslist(array); //แปลง array เป็น list 
+		String newS = String.join(",",list); //"a,bb,ccc,dddd"
+		
+ 	}
+}
+```
+
+### List
+เป็นการเก็บข้อมูลที่ไม่จำเป็นต้องรู้จำนวนข้อมูลที่แน่นอนเพราะภายใน 1 ช่องของ list จะประกอบไปด้วยสองส่วนคือ ข้อมูลในช่องนั้น และ pointer ที่ชี้ไปที่ list ช่องถัดไป
+และยังจำเป็นต้องมี pointer ที่ชี้ไปที่ช่องแรกของ list ด้วย นอกจากนี้ List ยังถือเป็น super class ของ ArrayList
+
+```
+
+```
+>Note : เวลาในการเข้าถึงข้อมูลใน List ใช้ O(n) เนื่องจากต้องไล่วิ่ิงไปทีละช่องๆจนกว่าจะถึงข้อมูลที่ต้องการ แต่สามารถแทรกช่องใหม่ได้เร็ว O(1)เนื่องจากแค่เปลี่ยน pointer เท่านั้น
+
+join & split
+```java
+import java.util.List;
+import java.util.Arrays;
+
+public class HelloWorld{
+	public static void main(){
+		String s = "a bb ccc dddd";
+		String[] array =  s.split(" "); //สร้าง array ["a","bb","ccc","dddd"]
+		List<String> list = Arrays.aslist(array); //แปลง array เป็น list 
+		String newS = String.join(",",list); //"a,bb,ccc,dddd"
+		
+ 	}
+}
+```
 
 ### Set
 ### Map

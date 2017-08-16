@@ -226,30 +226,6 @@ public class HelloWorld{
 }
 ```
 
-### List
-เป็นการเก็บข้อมูลที่ไม่จำเป็นต้องรู้จำนวนข้อมูลที่แน่นอนเพราะภายใน 1 ช่องของ list จะประกอบไปด้วยสองส่วนคือ ข้อมูลในช่องนั้น และ pointer ที่ชี้ไปที่ list ช่องถัดไป
-และยังจำเป็นต้องมี pointer ที่ชี้ไปที่ช่องแรกของ list ด้วย นอกจากนี้ List ยังถือเป็น super class ของ ArrayList
-
-```
-
-```
->Note : เวลาในการเข้าถึงข้อมูลใน List ใช้ O(n) เนื่องจากต้องไล่วิ่ิงไปทีละช่องๆจนกว่าจะถึงข้อมูลที่ต้องการ แต่สามารถแทรกช่องใหม่ได้เร็ว O(1)เนื่องจากแค่เปลี่ยน pointer เท่านั้น
-
-join & split
-```java
-import java.util.List;
-import java.util.Arrays;
-
-public class HelloWorld{
-	public static void main(){
-		String s = "a bb ccc dddd";
-		String[] array =  s.split(" "); //สร้าง array ["a","bb","ccc","dddd"]
-		List<String> list = Arrays.aslist(array); //แปลง array เป็น list 
-		String newS = String.join(",",list); //"a,bb,ccc,dddd"
-		
- 	}
-}
-```
 
 ### Set
 ### Map

@@ -8,10 +8,10 @@
 * Conjunction (AND) : และ (˄)
 * Disjunction (OR) : หรือ (˅)
 * Implication (IF..THEN) : ถ้าแล้ว (→) 
-* Biconditional (IF && ONlY IF) : ก็ต่อเมื่อ ()
+* Biconditional (IF && ONlY IF) : ก็ต่อเมื่อ (↔)
 * Exclusive OR (XOR) : นิเสธของก็ต่อเมื่อ 
 
->Note : ลำดับความสัญของ operator คัญเรียงตามลำดับจากบนลงล่างคือให้ทำ ¬ , ˄ , ˅ , → ,  ตามลำดับ เช่น p ˄ ¬q ˅ r → p  s จะเขียนได้เป็น (((p ˄ (¬q)) ˅ r ) → p)  s
+>Note : ลำดับความสัญของ operator คัญเรียงตามลำดับจากบนลงล่างคือให้ทำ ¬ , ˄ , ˅ , → , ↔  ตามลำดับ เช่น p ˄ ¬q ˅ r → p ↔ s จะเขียนได้เป็น (((p ˄ (¬q)) ˅ r ) → p) ↔  s
 
 ## Contrapositive & Converse & Inverse
 เป็นการนิยามความสัมพันธ์ที่เกี่ยวกับ operator implication(ถ้าแล้ว) เพิ่มเติมโดยมีความสัมพันธ์ดังนี้

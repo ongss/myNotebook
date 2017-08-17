@@ -8,10 +8,10 @@
 * Conjunction (AND) : และ (˄)
 * Disjunction (OR) : หรือ (˅)
 * Implication (IF..THEN) : ถ้าแล้ว (→) 
-* Biconditional (IF && ONlY IF) : ก็ต่อเมื่อ (↔)
+* Biconditional (IF && ONlY IF) : ก็ต่อเมื่อ ()
 * Exclusive OR (XOR) : นิเสธของก็ต่อเมื่อ 
 
->Note : ลำดับความสัญของ operator คัญเรียงตามลำดับจากบนลงล่างคือให้ทำ ¬ , ˄ , ˅ , → , ↔ ตามลำดับ เช่น p ˄ ¬q ˅ r → p ↔ s จะเขียนได้เป็น (((p ˄ (¬q)) ˅ r ) → p) ↔ s
+>Note : ลำดับความสัญของ operator คัญเรียงตามลำดับจากบนลงล่างคือให้ทำ ¬ , ˄ , ˅ , → ,  ตามลำดับ เช่น p ˄ ¬q ˅ r → p  s จะเขียนได้เป็น (((p ˄ (¬q)) ˅ r ) → p)  s
 
 ## Contrapositive & Converse & Inverse
 เป็นการนิยามความสัมพันธ์ที่เกี่ยวกับ operator implication(ถ้าแล้ว) เพิ่มเติมโดยมีความสัมพันธ์ดังนี้
@@ -44,4 +44,15 @@ p ∧ ( q ∨ r ) ≡ ( p ∧ q ) ∨ ( p ∧ r )
 ¬ ( p ∧ q ) ≡ ¬ p ∨ ¬ q
 ¬ ( p ∨ q ) ≡ ¬ p ∧ ¬ q
 
-##
+## Predicate Logic
+คือประพจน์ที่ต้องแทนค่าที่อยู่ในขอบเขตของมันลงไปถึงจะบอกค่าความจริงได้ เช่น P(x) | X gose to school, where X can be John or Mary หมายความว่าต้องแทนค่า X ด้วย John หรือ Mary ก่อนถึงจะบอกค่าความจริงได้ 
+
+## Quatifier
+* Universal quantifier คือ ∀xP(x) ≡ P(x1)∧P(x2)∧…∧P(xn) หมายความว่า P(x) นั้นจะต้องเป็นจริงทุกกรณี ∀xP(x) ถึงจะเป็นจริง
+* Existential quantifier คือ ∃xP(x) ≡ P(x1)∨ P(x2)∨ …∨ P(xn) หมายความว่า P(x) นั้นจะต้องเป็นจริงอย่างน้อย 1 กรณี ∃xP(x) ถึงจะเป็นจริง
+### Negations of quatifier
+¬∀xP(x) ≡ ∃x ¬P(x)
+¬∃xP(x) ≡ ∀x ¬P(x)
+
+
+ 

@@ -24,7 +24,8 @@
 1) p → ¬q
 2) q → r
 3) ¬r → ¬p 
-กลุ่มของ compound proposition นี้เป็น consistency เพราะเมื่อ p ≡ T , q ≡ F, r ≡ T ทั้ง3ประพจน์มีค่าความมจริงเป็นจริง
+
+กลุ่มของ compound proposition นี้เป็น consistency เพราะเมื่อ p ≡ T , q ≡ F, r ≡ T ทั้ง 3 compound proposition มีค่าความมจริงเป็นจริง
 
 ## Tautology & Contradiction & Contingency
 * tautolgy คือ compound proposition ที่มีค่าความจริงเป็นจริงเสมอทุกกรณี

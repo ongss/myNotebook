@@ -228,9 +228,60 @@ public class HelloWorld{
 }
 ```
 
-
 ### Set
+เป็นรูปแบบการเก็บข้อมูลแบบเดียวกับ set ทางคณิตศาสตร์ซึ่งจะไม่มีสมาชิกที่ซ้ำกันเลย
+```java
+import java.util.HashSet;
+import java.util.Set;
+
+public class HelloWorld{
+	public static void main(String[] args){
+		Set<Integer> s = new HashSet<>(); //ประกาศ set ใหม่ขึ้นมา
+		s.add(1); //เพิ่ม 1 เข้าไปใน set s
+		s.remove(1); //เอา 1 ออกจาก set s
+		s.contain(4) //เช็คว่าข้างใน set s มี 4 มั้ย
+		
+		//เรียกดูข้อมูลทั้งหมดใน set 
+		for(int x : s){
+			System.out.println(x);
+		}
+	}
+}
+```
+>Note : ข้อมูลใน set ไม่จำเป็นต้องเรียงตามลำดับการ input
+
 ### Map
+คือการเก็บข้อมูลที่เป็นคู่ระหว่าง key กับ value โดยเราสามารถเข้าถึงข้อมูล มั้value ได้โดยที่ key ทุกอันต้องไม่ซ้ำกัน
+```java
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class HelloWorld{
+	public static void main(String[] agrs){
+		Map<String,String> day = new HashMap<>(); //ประกาศ map ที่ <key = String,value = String>
+		day.put("Mon","Monday"); //ใส่ค่าลงไปใน map โดย key="Mon" , value="Monday" 
+		day.get("Mon"); //เรียกดูข้อมูล Monday
+		System.out.print(day) //{Mon=Monday,}
+		day.containKey("Mon"); /เช็คว่าใน map มี key ชื่อ Mon มั้ย
+		day.containValue("Monday"); //เข็คว่าใน map มี value ชื่อ Monday มั้ย
+	
+		//ดู key ทั้งหมดของ day
+		for(String x:day.keySet()){
+			System.out.println(x);
+		}
+		//ดู values ทั้งหมดของ day
+		for(String x:day.values()){
+			System.out.print(x);
+		}
+		
+		//จับคู่ key กับ value
+		for(Entry<String,String> x:day.entrySet()){
+			System.out.println(x);
+		}
+	}
+}
+```
+>Note : ข้อมูลใน map ไม่จำเป็นต้องเรียงตามลำดับการ input
 
 ## functions
 

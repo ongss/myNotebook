@@ -39,9 +39,11 @@
 ## Logical Equivalences
 ### Distributive Laws
 p ∨ ( q ∧ r ) ≡ ( p ∨ q ) ∧ ( p ∨ r )
+
 p ∧ ( q ∨ r ) ≡ ( p ∧ q ) ∨ ( p ∧ r )
 ### De Morgan's Laws
 ¬ ( p ∧ q ) ≡ ¬ p ∨ ¬ q
+
 ¬ ( p ∨ q ) ≡ ¬ p ∧ ¬ q
 
 ## Predicate Logic
@@ -52,6 +54,7 @@ p ∧ ( q ∨ r ) ≡ ( p ∧ q ) ∨ ( p ∧ r )
 * Existential quantifier คือ ∃xP(x) ≡ P(x1)∨ P(x2)∨ …∨ P(xn) หมายความว่า P(x) นั้นจะต้องเป็นจริงอย่างน้อย 1 กรณี ∃xP(x) ถึงจะเป็นจริง
 ### Negations of quatifier
 ¬∀xP(x) ≡ ∃x ¬P(x)
+
 ¬∃xP(x) ≡ ∀x ¬P(x)
 
 

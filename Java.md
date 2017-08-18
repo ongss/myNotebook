@@ -377,7 +377,18 @@ public class Hero extends Human {
 Hero hero = new Hero("eiei","Fire balls");
 hero.sayHi(); //Hi, my name is eiei. I am Hero
 hero.usePower(); // eiei use his/her power : Fire balls
-hero.HumanSayHi(); // Hello, my name is eiei 
+hero.HumanSayHi(); // Hello, my name is eiei
+
+
+//หรือสามารถทำแบบนี้ได้ด้วย สร้าง sub class มาใส่ตัวแปรที่เป็น super class
+Human a = new Hero("super main","Power fuill");
+a.sayHi() //Hi, my name is eiei. I am Hero
+a.humanSayHi() // ไม่สามารถทำงานได้เพราะ class Human ไม่มีฟังก์ชั่น ้ humanSayHi() หรือก็คือการ สร้าง sub class มาใส่ตัวแปรที่เป็น super class เป็นการ limit การทำงานของ object น้ันเอาไว้
+Hero b = (Hero) a; // สามารถเปลี่ยน object a เป็น class Hero โดยสมบูรณ์
+Hero b.humanSayHi() //Hello, my name is eiei
+
+
+
 ```
 
 > Note : Hero extends Human มาเพราะงั้น Hero เป็น subclass ของ Human

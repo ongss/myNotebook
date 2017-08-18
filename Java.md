@@ -195,7 +195,7 @@ public class HelloWorld{
 
 >Note : เนื่องจาก List เป็น super class ของ ArrayList ดังนั้น syntax การรับข้อมูลเข้าของ ArrayList จึงเหมือนกับ List 
 
-```
+```java
 import java.util.List;
 
 public class HelloWorld{
@@ -285,7 +285,7 @@ public class HelloWorld{
 
 ## functions
 
-
+### function overload
 
 # OOP
 
@@ -316,7 +316,10 @@ Human person = new Human();
 
 >Note : การตั้งชื่อ class ควรขึ้นต้นด้วยตัวพิมพ์ใหญ่เสมอ
 
->Note :  Integer String Scanner ก็เป็น class เหมือนกันนะ แต่มันถูก build in มาพร้อมกับ java แล้ว 
+>Note : Integer String Scanner ก็เป็น class เหมือนกันนะ แต่มันถูก build in มาพร้อมกับ java แล้ว
+
+>Note : ตัวแปร object เช่น person จะเป็น pointer ที่ชี้ไปยังที่ข้อมูล่างๆใน object นั้นเก็บไว้อยู่
+
 ### constructor
 แล้วถ้าเราต้องการสร้าง object จาก class Human ที่มีชื่อแตกต่างกันหละ!! เราสามารถทำมันได้โดยการใส่ constructor ลงไปใน class นั้นเอง constructor คือฟังก์ชั่นที่ใช้กำหนดค่าของตัวแปรในแต่ละ object ที่สร้างจาก class โดยที่ฟังก์ชั่นที่มีชื่อเดียวกับ class จะเป็น constructor 
 
@@ -399,7 +402,7 @@ Hero b.humanSayHi() //Hello, my name is eiei
 ```java
 public class Human {
 	String name = "John Smith";
-	double weight = "50.5";
+	private double weight = "50.5"; // ใช้ private เพราะ เมื่อเราสร้าง getter & setter ขึ้นมาแล้วเราจึงไม่ต้องการให้มีการเข้าถึงตัวแปรได้โดยตรง
 	// weight ไม่สามรถน้อยกว่า 0 ได้นะ
 	public void setWeight(double weight){
 		if(weight<0){
@@ -415,6 +418,26 @@ public class Human {
 }
 
 ```
+### equals
+เป็น pattern การเปรียบเทียบ class สองอันว่าเหมือนหรือต่างกัน
+```java
+public class Human {
+	String name = "John Smith";
+	public boolean equal(){
+		if(person1.name == person2.name){
+			return true;
+		}
+		return false
+	}
+}
+
+Human person1 = new Human();
+Human person2 = new Human();
+person1 == person2 // False เพราะว่า person1 กับ person2 เป็นคนละ object กัน ดังนั้นเราจึงค้องสร้างฟังก์ชั่น equal
+person1.equal(person2) // True
+
+```
+
 
 
 ### instanceof
@@ -447,7 +470,7 @@ hero instanceof Human //true
 
 
 ### final
-เป็น prefix ที่ใช้เติมหน้าตัวแปรที่ต้องการให้เป็นค่าคงที่ หรือ ด้านหน้าฟังก์ชั่นที่ไม่ต้องการให้ถูก override 
+เป็น prefix ที่ใช้เติมหน้าตัวแปรที่ต้องการให้เป็นค่าคงที่ ,ด้านหน้าฟังก์ชั่นที่ไม่ต้องการให้ถูก override หรือถ้าเอา final ไว้หน้า class จะทำให้ class นั้นไม่สามารถถูก extend   
 
 ```java
 public class Human {

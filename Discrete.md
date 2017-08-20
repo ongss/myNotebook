@@ -14,9 +14,8 @@
 * Biconditional (IF && ONlY IF) : ก็ต่อเมื่อ (↔) 
 * Exclusive OR (XOR) : นิเสธของก็ต่อเมื่อ 
 
-unary operator -> one operand : not
-
-binary operator -> two operand 
+- unary operator -> one operand : not
+- binary operator -> two operand 
  
 >Note : ลำดับความสำคัญของ operator เรียงตามลำดับจากบนลงล่างคือให้ทำ ¬ , ˄ , ˅ , → , ↔  ตามลำดับ เช่น p ˄ ¬q ˅ r → p ↔ s จะเขียนได้เป็น (((p ˄ (¬q)) ˅ r ) → p) ↔  s
 
@@ -56,14 +55,10 @@ p ∧ ( q ∨ r ) ≡ ( p ∧ q ) ∨ ( p ∧ r )
 
 ## Predicate Logic
 คือประพจน์ที่ต้องแทนค่าที่อยู่ในขอบเขตของมันลงไปถึงจะบอกค่าความจริงได้ เช่น P(x) | x gose to school, where x can be John or Mary 
-
-x = variable, goes to school = predicate
-
-หมายความว่าต้องแทนค่า x ด้วย John หรือ Mary ก่อนถึงจะบอกค่าความจริงได้ 
+x = variable, goes to school = predicate หมายความว่าต้องแทนค่า x ด้วย John หรือ Mary ก่อนถึงจะบอกค่าความจริงได้ 
 
 ## Quatifier
 * Universal quantifier คือ ∀xP(x) [read : for all x P(x)] ≡ P(x1)∧P(x2)∧…∧P(xn) 
-
 หมายความว่า P(x) นั้นจะต้องเป็นจริงทุกกรณีใน universal of discourse(x1,x2,...xn) ∀xP(x) ถึงจะเป็นจริง
 
 * Existential quantifier คือ ∃xP(x) [read : for some x P(x)] ≡ P(x1)∨P(x2)∨…∨P(xn)

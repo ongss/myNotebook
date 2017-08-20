@@ -11,8 +11,9 @@
 * Biconditional (IF && ONlY IF) : ก็ต่อเมื่อ (↔)
 * Exclusive OR (XOR) : นิเสธของก็ต่อเมื่อ 
 
-unary operater -> one operand : not
-
+>unary operator -> one operand : not
+binary operator -> two operand 
+ 
 >Note : ลำดับความสัญของ operator คัญเรียงตามลำดับจากบนลงล่างคือให้ทำ ¬ , ˄ , ˅ , → , ↔  ตามลำดับ เช่น p ˄ ¬q ˅ r → p ↔ s จะเขียนได้เป็น (((p ˄ (¬q)) ˅ r ) → p) ↔  s
 
 ## Contrapositive & Converse & Inverse

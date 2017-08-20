@@ -45,7 +45,11 @@ String c = Boolean.toString(true);
 
 a = "" + 3; // a = "3"  
 b = "" + true;// b = "true"
-c = "python" + 2 + "java" // c = python2java -> เปลี่ยน 2 เป็น string แล้วค่อยต่อ string 
+c = "python" + 2 + "java"; // c = python2java -> เปลี่ยน 2 เป็น string แล้วค่อยต่อ string
+d = 3 - 1 + "eiei"; // d = 2eiei
+e = "eiei" + 3 + 1; // e = eiei31
+f = "eiei" + 3 - 1; // error !!!
+ 
 
 //เปลียนตัวแปร  char <--> int <--> double (วิธีนี้ใช้กับ String ไม่ได้)
 int x = (int) 2.3;
@@ -132,7 +136,21 @@ public class HelloWorld{
 	}
 }
 ```
-
+## String
+```java
+String S = "  Hello World  ";
+int n = S.length(); // n = 15
+String t = S.trim(); // t = "Hello World" เหมือน strip ใน python  
+t = S.toUpperCase(); // t = "  HELLO WORLD  "
+t = S.toLowerCase(); // t = "  hello world  "
+n = S.indexOf("-"); // n = 7 เหมือน find ใน python ถ้าไม่เจอ return -1 
+n = S.indexOf("o",7); // n = 9 เริ่มหา o ตั้งแต่ช่องที่ 7
+boolean b = S.contains("or"); // b = true
+b = S.equls("Hello World"); // b = false 
+if(S.compareTo(t) == 0) // S == t
+if(S.compareTo(t) < 0) // S < t
+if(S.compareTo(t) > 0) // S > t
+```
 ## data structure
 เป็นรูปแบบการเก็บข้อมูลจำนวนมากๆ ให้สามารถเรียกใช้ข้อมูลหรือแก้ไขข้อมูลได้ง่าย
 

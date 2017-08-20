@@ -13,6 +13,7 @@ public class Hello { //public class filename -> Hello.java
 	}
 }  
 
+```
 
 ## variable type
 ในภาษา java มีตัวแปรชนิดหลักๆดังนี้ 

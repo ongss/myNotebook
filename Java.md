@@ -11,7 +11,7 @@ public class Hello { //public class filename -> Hello.java
 	public static void main(String[] args) { //main method
 		System.out.println("Hello"); 
 	}
-}  ```
+}  
 
 
 ## variable type

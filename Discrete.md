@@ -34,7 +34,7 @@
 กลุ่มของ compound proposition นี้เป็น consistency เพราะเมื่อ p ≡ T , q ≡ F, r ≡ T ทั้ง 3 compound proposition มีค่าความจริงเป็นจริง
 
 ## Tautology & Contradiction & Contingency
-* tautolgy(สัจนิรันดร์) คือ compound proposition ที่มีค่าความจริงเป็นจริงเสมอทุกกรณี always True
+* tautology(สัจนิรันดร์) คือ compound proposition ที่มีค่าความจริงเป็นจริงเสมอทุกกรณี always True
 * contradiction คือ compound proposition ที่มีค่าความจริงเป็นเท็จเสมอทุกกรณี always False
 * contigency คือ compound proposition ที่แล้วนอกเหนือจาก tautology และ contradiction
 

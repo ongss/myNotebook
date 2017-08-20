@@ -6,12 +6,13 @@ java เป็นภาษาที่มีจุดเด่นเกี่ย
 
 
 # syntax
-
+```java
 public class Hello { //public class filename -> Hello.java
 	public static void main(String[] args) { //main method
 		System.out.println("Hello"); 
 	}
-}
+}  ```
+
 
 ## variable type
 ในภาษา java มีตัวแปรชนิดหลักๆดังนี้ 

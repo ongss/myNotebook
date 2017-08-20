@@ -7,6 +7,12 @@ java เป็นภาษาที่มีจุดเด่นเกี่ย
 
 # syntax
 
+public class Hello { //public class filename -> Hello.java
+	public static void main(String[] args) { //main method
+		System.out.println("Hello"); 
+	}
+}
+
 ## variable type
 ในภาษา java มีตัวแปรชนิดหลักๆดังนี้ 
 * ประเภทตัวอักษร <code>String</code> : ตัวอักษรหลายตัว, <code>char</code> : ตัวอักษรตัวเดียว

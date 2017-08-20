@@ -3,13 +3,15 @@
 # Logic 
 คือหลักการคำนวนค่าความจริงของประพจน์(proposition) หรือประพจน์ที่มารวมตัวกัน(compound proposition)
 
-## operators
+## Logical operators
 * Negetion (Not) : นิเสธ (¬)
 * Conjunction (AND) : และ (˄)
 * Disjunction (OR) : หรือ (˅)
 * Implication (IF..THEN) : ถ้าแล้ว (→) 
 * Biconditional (IF && ONlY IF) : ก็ต่อเมื่อ (↔)
 * Exclusive OR (XOR) : นิเสธของก็ต่อเมื่อ 
+
+unary operater -> one operand : not
 
 >Note : ลำดับความสัญของ operator คัญเรียงตามลำดับจากบนลงล่างคือให้ทำ ¬ , ˄ , ˅ , → , ↔  ตามลำดับ เช่น p ˄ ¬q ˅ r → p ↔ s จะเขียนได้เป็น (((p ˄ (¬q)) ˅ r ) → p) ↔  s
 

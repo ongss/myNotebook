@@ -1,10 +1,7 @@
 # Discrete 
 
-# Proposition
-ประพจน์ที่เป็นประโยคบอกเล่า ที่บอกค่าความจริง True หรือ False เท่านั้น
-
 # Logic 
-คือหลักการคำนวนค่าความจริงของประพจน์(proposition) หรือประพจน์ที่มารวมตัวกัน(compound proposition)
+คือหลักการคำนวนค่าความจริงของประพจน์(proposition) หรือประพจน์ที่มารวมตัวกัน(compound proposition) ค่าความจริง True หรือ False เท่านั้น
 
 ## Logical operators
 * Negetion (Not) : นิเสธ (¬)

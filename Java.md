@@ -21,7 +21,7 @@ public class Hello { //public class filename -> Hello.java
 * ประเภทตัวเลข <code>int</code> : จำนวนเต็มขนาด 4 byte, <code>short</code> : จำนวนเต็มขนาด 2 byte, <code>byte</code> : จำนวนเต็มขนาด 4 byte, <code>long</code> : จำนวนเต็มขนาด 8 byte, <code>float</code> : จำนวนจริงขนาด 4 byte, <code>double</code> : จำนวนจริงขนาด 8 byte
 * ประเภทอื่นๆ <code>boolean</code> : เก็บค่าความจริง true,false
 
->Note : การใช้ float ในการคำนวนอาจจะได้ต่าที่ผิดพลาดดั้งนั้นควรใช้ double แทน
+>Note : การใช้ float ในการคำนวนอาจจะได้ค่าที่ผิดพลาดดังนั้นควรใช้ double แทน
 
 >Note : 1 byte = 8 bit ซึ่ง 1 bit เก็บเลขฐานสองได้ 1 หลัก ดังนั้น short ที่มี 2 byte จึงเก็บค่าได้ 2^(2x8) =  65536 แบบ จึงสามารถเก็บค่าในช่วง [-32768,32767]
 

@@ -6,14 +6,6 @@ java เป็นภาษาที่มีจุดเด่นเกี่ย
 
 
 # syntax
-```java
-public class Hello { //public class filename -> Hello.java
-	public static void main(String[] args) { //main method
-		System.out.println("Hello"); 
-	}
-}  
-
-```
 
 ## variable type
 ในภาษา java มีตัวแปรชนิดหลักๆดังนี้ 
@@ -53,8 +45,9 @@ String c = Boolean.toString(true);
 
 a = "" + 3; // a = "3"  
 b = "" + true;// b = "true"
+c = "python" + 2 + "java" // c = python2java -> เปลี่ยน 2 เป็น string แล้วค่อยต่อ string 
 
-//เปลียนตัวแปร  char <--> int <--> double (วิธีนี้ใข้กับ String ไม่ได้)
+//เปลียนตัวแปร  char <--> int <--> double (วิธีนี้ใช้กับ String ไม่ได้)
 int x = (int) 2.3;
 double y = (double) 2;
 char w = (char) 97; //w = 'a';
@@ -62,20 +55,24 @@ int z = (int) 'a'; //z = 97;
 
 //เปลี่ยน String เป็นตัวเลข
 int i = Integer.parseInt("12");
-double j = double.parseDouble("12.2");
+double j = Double.parseDouble("12.2");
+boolean k = Boolean.parseBoolean("true");
 
 ```
 
 ## operator
-```java
 //operator เกี่ยวกับการคำนวนเลขใช้ + - * / % Math.pow(base,exponent)
 // and --> && , or --> || , นิเสธ(~) --> !
+//mod %
+//5%3 = 2      -5%3 = -2	    5%-3 =     -5%-3 = -2
+//ได้ค่าติดลบ ขึ้นกับตัวหน้าติดลบมั๊ย  ** หลักการ mod ขึ้นอยู่กับภาษาที่ใช้ python ได้ค่าไม่เหมือน java
 
-
-//ตัวอย่าง
+```java
+//if-else
 if( 2 + 3 == 5 || !(Math.pow(2,3) == 8)){
 	System.out.println("Hello");
-} else{
+} 
+else{
 	System.out.println("World");
 }
 
@@ -92,7 +89,7 @@ for(int i=10;i>0;i--){
 } // 10,9,8,7,6,5,4,3,2,1
 ```
 
->Note : ใน if else ต้องใช้ == 
+>Note : == คือ เท่ากับ
 
 >Note : while() จะทำงานไปเรื่อยๆถ้าค่าใน () ยังเป็นจริง
 
@@ -101,7 +98,7 @@ for(int i=10;i>0;i--){
 ## main
 main เป็นฟังก์ชั่นที่ใช้เขียนโค้ดในโปรแกรม โดยที่โปรแกรมจะเรื่มทำงานที่ในฟังก์ชั่น main ในภาษา java ฟังก์ชั่น main ต้องประกาศอยู่ใน class 
 ```java
-public class HelloWorld{
+public class HelloWorld{ // public class filename -> HelloWorld.java
 	public static void main(String[] args){
 		//program start here!! 
 	}
@@ -121,11 +118,11 @@ public class HelloWorld{
 	public static viod main(String[] agrs){
 		
 		//การรับ input แบบต่างๆ
-		Scanner sc = new Scanner();
+		Scanner sc = new Scanner(System.in);
 		int a = sc.nextInt(); //รับ input ตัวถัดไปโดยต้องเป็น int เท่านั้น
 		double b = sc.nextDouble(); //รับ input ตัวถัดไปโดยต้องเป็น double เท่านั้น
 		String c = sc.next(); //รับ input ตัวถัดไปโดยต้องเป็น String
-		String d = sc.nextln(); //รับ input โดยต้องเป็น String ไปจนจบบรรทัด
+		String d = sc.nextLine(); //รับ input โดยต้องเป็น String ไปจนจบบรรทัด
 		//สมมุติรับ input มาเป็น 124 55.2 Hello my name is ong --> a = 124,b = 55.2,c = "Hello",d = "my name is ong"
 		
 		//การแสดง output แบบต่างๆ

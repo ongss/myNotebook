@@ -117,6 +117,7 @@ C:\User\Name\Desktop>java HelloWorld myname myage
 
 ## input & output
 ```java
+
 import java.util.Scanner;
 
 public class HelloWorld{
@@ -145,11 +146,22 @@ t = S.toUpperCase(); // t = "  HELLO WORLD  "
 t = S.toLowerCase(); // t = "  hello world  "
 n = S.indexOf("-"); // n = 7 เหมือน find ใน python ถ้าไม่เจอ return -1 
 n = S.indexOf("o",7); // n = 9 เริ่มหา o ตั้งแต่ช่องที่ 7
+
 boolean b = S.contains("or"); // b = true
 b = S.equls("Hello World"); // b = false 
+
 if(S.compareTo(t) == 0) // S == t
 if(S.compareTo(t) < 0) // S < t
 if(S.compareTo(t) > 0) // S > t
+
+for(char c: s.toCharArray()) // วนfor char ทีละตัว
+
+t = S.substring(2,3); // S[2]
+t = S.substring(2,8); // S[2:8]
+t = S.substring(2); // S[2:]
+t = S.substring(0,8); // S[:8]
+t = S.substring(s.length()-1); // S[-1]
+char c = S.charAt(6); // c = o
 ```
 ## data structure
 เป็นรูปแบบการเก็บข้อมูลจำนวนมากๆ ให้สามารถเรียกใช้ข้อมูลหรือแก้ไขข้อมูลได้ง่าย
@@ -164,7 +176,7 @@ for(int i=0;i<n.length;i++){ // .length เป็นฟังก์ชั่น�
 	n[i] = i; //ใส่ค่าเข้าไปใน array n
 }// array n จะมีค่า [0,1,2,3,4,5,6,7,8,9]
 //หรือประกาศแบบนี้ก็ได้
-n = new int[] {0,1,2,3,4,5,6,7,8,9};
+int[] n = new int[] {0,1,2,3,4,5,6,7,8,9};
 //หรือไม่ก้แบบนี้
 int[] n = {0,1,2,3,4,5,6,7,8,9};
 //สามารถเปลี่ยน int เป็นตัวแปรชนิดอื่นก็ได้ เช่น
@@ -173,9 +185,16 @@ String[] days = new String[] {"mon","tue","wed","thu","fri","sat","sun"};
 // การเรียกข้อมูลใน array
 System.out.println(n[3]); // 3
 System.out.println(Arrays.toString(n)); //[0,1,2,3,4,5,6,7,8,9]
+for(int e : n) // for each number in array >>in python -> for e in n:
 
 // array หลายมืติ หรือก็คือ array มาซ้อนกันหลายๆชั้นเช่น
 int[][] x = {{1,2,3},{4,5,6},{7,8,9}};
+for(int i=0;i<x.length();i++)
+   for(int j=0;j<x[i].length();j++)
+	// x[i][j];
+for(int[] row:x)    //for row in x:
+   for(int e:row)   //   for e in row;
+       //e;
 System.out.println(x[0][0]); // 1 
 System.out.println(x[0][1]); // 2
 System.out.println(Arrays.deepToString(x)); // [[1,2,3],[4,5,6],[7,8,9]]

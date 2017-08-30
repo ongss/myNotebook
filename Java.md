@@ -207,22 +207,28 @@ System.out.println(Arrays.deepToString(x)); // [[1,2,3],[4,5,6],[7,8,9]]
 ```java
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class HelloWorld{
 	public static void main(String[] agrs){
 		ArrayList<Integer> a = new ArrayList<>(); //ประกาศ arraylist ชื่อ a เก็บข้อมูลประเภท Integer
+		LinkedList<Integer> a = new LinkedList<>(); 
+		// List<Integer> a = new ArrayList<>(); สามารถเขียนงี้ได้ 
+		// List<Integer> a = new LinkedList<>(); สามารถเขียนงี้ได้
 		a.add(2); //ใส่ข้อมูล 2 ต่อท้าย arraylist
-		a.add(0,1); //ใส่ข้อมูล 1 แทรกที่ arraylist ช่องที่ 0
-		a.set(1,3); //set ข้อมูลช่องที่ 1 ให้เป็นค่า 3
-		a.get(1); //เรียกดูข้อมูลช่องที่ 1
+		a.add(0,1); //ใส่ข้อมูล 1 แทรกที่ arraylist ช่องที่ 0 
+		a.set(1,3); //set ข้อมูลช่องที่ 1 ให้เป็นค่า 3 a[1]=3;
+		a.get(1); //เรียกดูข้อมูลช่องที่ 1 a[1];
+		a.set(1,a.get()+100); //เพิ่มค่าช่อง 1 ไป 100 a[1]+=100;
 		a.remove(1); //ลบข้อมูลตำแหน่งที่ 1 ของ a
-		a.contain(1); //ใน aมีค่าที่เป็น 1 มั้ย return เป็น true false
+		a.contains(1); //ใน aมีค่าที่เป็น 1 มั้ย return เป็น true false
 		
 		List<Integer> b = Arrays.asList(1,2,3,4); //ประกาศ list ตั้งแต่ 1 ถึง 4
 		a.addAll(b); //เอา list b มาต่อหลัง list a
 		a.addAll(0,b); //เอา list b มาแทรกตำแหน่งที่ 0 
 		
-		//เรีนกดูจ้อมูลั้งหมดใน list
+		//เรีนกดูข้อมูลทั้งหมดใน list
+		System.out.println(a);
 		for(Integer x : a){
 			System.out.print(x+" ");
 		}
@@ -238,6 +244,8 @@ public class HelloWorld{
 
 >Note : เนื่องจาก List เป็น super class ของ ArrayList ดังนั้น syntax การรับข้อมูลเข้าของ ArrayList จึงเหมือนกับ List 
 
+>Note : List สร้างได้แบบ ArrayList, LinkedList
+
 ```java
 import java.util.List;
 
@@ -249,7 +257,7 @@ public class HelloWorld{
 		a.set(1,3); //set ข้อมูลช่องที่ 1 ให้เป็นค่า 3
 		a.get(1); //เรียกดูข้อมูลช่องที่ 1
 		a.remove(1); //ลบข้อมูลตำแหน่งที่ 1 ของ a
-		a.contain(1); //ใน aมีค่าที่เป็น 1 มั้ย return เป็น true false
+		a.contains(1); //ใน a มีค่าที่เป็น 1 มั้ย return เป็น true false
 	}
 }
 ```
@@ -262,10 +270,14 @@ import java.util.Arrays;
 
 public class HelloWorld{
 	public static void main(){
-		String s = "a bb ccc dddd";
-		String[] array =  s.split(" "); //สร้าง array ["a","bb","ccc","dddd"]
+		String s = "a-bb-ccc-dddd";
+		String[] array =  s.split("-"); //สร้าง array string ["a","bb","ccc","dddd"]
 		List<String> list = Arrays.aslist(array); //แปลง array เป็น list 
 		String newS = String.join(",",list); //"a,bb,ccc,dddd"
+		
+		for(String s:list){
+			//use s;
+		}
 		
  	}
 }
@@ -273,6 +285,7 @@ public class HelloWorld{
 
 ### Set
 เป็นรูปแบบการเก็บข้อมูลแบบเดียวกับ set ทางคณิตศาสตร์ซึ่งจะไม่มีสมาชิกที่ซ้ำกันเลย
+>Note : Set สร้างได้แบบ TreeSet, HashSet
 ```java
 import java.util.HashSet;
 import java.util.Set;

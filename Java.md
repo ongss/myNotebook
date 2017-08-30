@@ -343,6 +343,8 @@ public class HelloWorld{
 
 ### function overload
 
+### varargs
+
 # OOP
 
 Object Oriented Programming หรือ OOP คือหลักการที่มองทุกอย่างที่อยู่ภายในโปรแกรมเป็น object ซึ่งแต่ละ object จะเก็บตัวแปร หรือ ฟังก์ชั่นอยู่ในตัวมัน โดยเราสามารถเรียกใช้ดูค่าของตัวแปร หรือ เรียกใช้งานฟังก์ชั่นที่อยู่ใน object ได้

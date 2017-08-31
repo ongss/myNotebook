@@ -462,7 +462,9 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Scanner;
 public class HelloWorld{
-	public static void main(String[] args) thrpws IOException{
+	public static void main(String[] args) throws IOException{ //Exception : ข้อผิดพลาดในโปรแกรม
+								   //IOException : ปัญหาเกี่ยวกับ input/output ->อ่านไฟล์ไม่ได้ บลาๆ
+								   //โปรแกรมพัง จะจบเลย
 		//read file
 		Scanner infile = new Scanner(new File("filePath"));
 		//write file
@@ -472,6 +474,8 @@ public class HelloWorld{
 			outfile.println(line);
 		}
 	}
+	infile.close();
+	outfile.close();
 }
 ```
 

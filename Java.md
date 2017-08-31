@@ -390,7 +390,7 @@ public class HelloWorld{
 	static int prod(int a,int b){ //prod(int,int)
 		return a*b; 
 	}
-	static double prod(int a,double b){ //prod(int,int)
+	static double prod(int a,double b){ //prod(int,double)
 		return a*b; 
 	}
 	

@@ -204,7 +204,7 @@ System.out.println(Arrays.deepToString(x)); // [[1,2,3],[4,5,6],[7,8,9]]
 >Note : เวลาการข้าถึงข้อมูลใน array ใช้ O(1) เช่น a[1] แต่ใช้เวลาในการแทรกข้อมูล O(n) ถ้าจะแทรกช่องที่ m จะต้องขยับข้อมูลช่องที่ m ถึง n ไปหนึ่งช่อง
 
 ### ArrayList
-เป็น sub class ของ Listที่มีรูปแบบการเก็บข้อมูลที่คล้าย array แต่สามารถขยายขนาดได้
+เป็น sub class ของ List ที่มีรูปแบบการเก็บข้อมูลที่คล้าย array แต่สามารถขยายขนาดได้
 ```java
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -266,7 +266,7 @@ public class HelloWorld{
 ```
 >Note : เวลาในการเข้าถึงข้อมูลใน List ใช้ O(n) เนื่องจากต้องไล่วิ่ิงไปทีละช่องๆจนกว่าจะถึงข้อมูลที่ต้องการ แต่สามารถแทรกช่องใหม่ได้เร็ว O(1)เนื่องจากแค่เปลี่ยน pointer เท่านั้น
 
-join & split
+#### join & split
 ```java
 import java.util.List;
 import java.util.Arrays;
@@ -277,6 +277,7 @@ public class HelloWorld{
 		String[] array =  s.split("-"); //สร้าง array string ["a","bb","ccc","dddd"]
 		List<String> list = Arrays.aslist(array); //แปลง array เป็น list 
 		String newS = String.join(",",list); //"a,bb,ccc,dddd"
+		String newS = String.join(",",array); //อย่างงี้ก็ได้เหมือนกัน
 		
 		for(String s:list){
 			//use s;

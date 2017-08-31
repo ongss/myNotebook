@@ -619,8 +619,8 @@ public class Human {
 ```java
 public class Human {
 	String name = "John Smith";
-	public boolean equal(){
-		if(person1.name == person2.name){
+	public boolean equal(Human other){
+		if(this.name == other.name){
 			return true;
 		}
 		return false

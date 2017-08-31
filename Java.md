@@ -68,8 +68,8 @@ boolean k = Boolean.parseBoolean("true");
 ```java
 // operator เกี่ยวกับการคำนวนเลขใช้ + - * / % Math.pow(base,exponent)
 // and --> && , or --> || , นิเสธ(~) --> !
-//mod %
-// 5%3 = 2      -5%3 = -2	    5%-3 = 2    -5%-3 = -2  ได้ค่าติดลบ ขึ้นกับตัวหน้าติดลบมั๊ย 
+//	mod %
+// 5%3 = 2      -5%3 = -2	    5%-3 =     -5%-3 = -2  ได้ค่าติดลบ ขึ้นกับตัวหน้าติดลบมั๊ย 
 ** หลักการ mod ขึ้นอยู่กับภาษาที่ใช้ python ได้ค่าไม่เหมือน java
 
 
@@ -148,7 +148,7 @@ n = S.indexOf("-"); // n = 7 เหมือน find ใน python ถ้าไ�
 n = S.indexOf("o",7); // n = 9 เริ่มหา o ตั้งแต่ช่องที่ 7
 
 boolean b = S.contains("or"); // b = true
-b = S.equals("Hello World"); // b = false 
+b = S.equls("Hello World"); // b = false 
 
 if(S.compareTo(t) == 0) // S == t
 if(S.compareTo(t) < 0) // S < t
@@ -341,9 +341,139 @@ public class HelloWorld{
 
 ## functions
 
+```java
+public class HelloWorld{
+	public int a = 5; //global variable
+	public static void main(String[] args){
+		int b = 2; //local variable -> use only in main
+	}
+	static void m(){
+		Symtem.out.println(a); // print a in global
+	}
+	static void n(){
+		int a = 10;
+		Symtem.out.println(a); // print a in local
+	}
+}
+```
 ### function overload
 
-### varargs
+```java
+public class HelloWorld{
+	public static void main(String[] args){
+		System.out.println(prod(5,3)); //15
+		System.out.println(prod(5,3,2)); //30
+		System.out.println(prod(5,1.5)); //7.5
+		
+		for(String x:args){
+			System.out.println(x);
+		}
+		
+		/* cmd
+		HelloWorld.java -> complier -> HelloWorld.class 
+		>> javac HelloWorld.java 
+		>> java HelloWorld kt eiei 555
+		args = [kt,eiei,555]
+		args.length = 3
+		*/
+		
+	}
+	
+	//overloading
+	static int prod(int a,int b,int c){ //prod(int,int,int)
+		return a*b*c; 
+	}
+	static int prod(int a,int b){ //prod(int,int)
+		return a*b; 
+	}
+	static double prod(int a,double b){ //prod(int,int)
+		return a*b; 
+	}
+	
+	//varargs
+	static int prod(int a,int.. args){
+		int ans = a;
+		for(int x: args){
+			ans*= x;
+		}
+		return ans;
+	}
+	
+}
+```
+
+### lambda map filter
+```java
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+public class HelloWorld{
+	public static void main(String[] args){
+		List<Integer> a,b;
+		a = Arrays.asList(1,2,3,4,5);
+		b = new ArrayList<>();
+		
+		for(int x:a){
+		  b.add(x*2);
+		}
+		System.out.println(b);
+		
+		b = a.stream()
+		     .map( e -> e*2 ); //e->e*2 is lambda
+		     .collect(Collectors.toList());
+		System.out.println(b);  // [2,4,6,8,10]
+		// b = [e*2 for e in a];
+		
+		/*---------------------------------------------*/
+		for(int x:a){
+		  if(x%2==0) b.add(x);
+		}
+		System.out.println(b);
+		
+		b = a.stream()
+		     .filter( e -> e%2==0 ); // e -> e%2==0 is lambda
+		     .collect(Collectors.toList());
+		System.out.println(b); // [2,4]
+		// b = [e for e in a if e%2==0];
+		
+		/*---------------------------------------------*/
+		for(int x:a){
+		  if(x%2==0) b.add(x*2);
+		}
+		System.out.println(b);
+		
+		b = a.stream()
+		     .filter( e -> e%2==0 );
+		     .map(e->e*2)
+		     .collect(Collectors.toList());
+		System.out.println(b); // [4,8]
+		// b = [e*2 for e in a if e%2==0];
+		
+		
+	}
+}
+```
+### file
+
+```java
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.util.Scanner;
+public class HelloWorld{
+	public static void main(String[] args) thrpws IOException{
+		//read file
+		Scanner infile = new Scanner(new File("filePath"));
+		//write file
+		PrintStream outfile = new PrintStream(new file("filePath"));
+		while(infile.hasNextLine()){
+			String line = infile.nextLine();
+			outfile.println(line);
+		}
+	}
+}
+```
 
 # OOP
 

@@ -224,15 +224,7 @@ public class HelloWorld{
 		a.remove(1); //ลบข้อมูลตำแหน่งที่ 1 ของ a
 		a.contains(1); //ใน aมีค่าที่เป็น 1 มั้ย return เป็น true false
 		
-		List<Integer> b = Arrays.asList(1,2,3,4); //ประกาศ list ตั้งแต่ 1 ถึง 4
-		a.addAll(b); //เอา list b มาต่อหลัง list a
-		a.addAll(0,b); //เอา list b มาแทรกตำแหน่งที่ 0 
 		
-		//เรีนกดูข้อมูลทั้งหมดใน list
-		System.out.println(a);
-		for(Integer x : a){
-			System.out.print(x+" ");
-		}
 	}
 }
 ```
@@ -259,6 +251,16 @@ public class HelloWorld{
 		a.get(1); //เรียกดูข้อมูลช่องที่ 1
 		a.remove(1); //ลบข้อมูลตำแหน่งที่ 1 ของ a
 		a.contains(1); //ใน a มีค่าที่เป็น 1 มั้ย return เป็น true false
+		
+		List<Integer> b = Arrays.asList(1,2,3,4); //ประกาศ list ตั้งแต่ 1 ถึง 4
+		a.addAll(b); //เอา list b มาต่อหลัง list a
+		a.addAll(0,b); //เอา list b มาแทรกตำแหน่งที่ 0 
+		
+		//เรีนกดูข้อมูลทั้งหมดใน list
+		System.out.println(a);
+		for(Integer x : a){
+			System.out.print(x+" ");
+		}
 	}
 }
 ```

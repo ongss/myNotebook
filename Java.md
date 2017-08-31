@@ -299,7 +299,7 @@ public class HelloWorld{
 		Set<Integer> s = new HashSet<>(); //ประกาศ set ใหม่ขึ้นมา
 		s.add(1); //เพิ่ม 1 เข้าไปใน set s
 		s.remove(1); //เอา 1 ออกจาก set s
-		s.contain(4) //เช็คว่าข้างใน set s มี 4 มั้ย
+		s.contains(4) //เช็คว่าข้างใน set s มี 4 มั้ย
 		
 		//เรียกดูข้อมูลทั้งหมดใน set 
 		for(int x : s){

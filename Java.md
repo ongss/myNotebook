@@ -322,8 +322,8 @@ public class HelloWorld{
 		day.put("Mon","Monday"); //ใส่ค่าลงไปใน map โดย key="Mon" , value="Monday" 
 		day.get("Mon"); //เรียกดูข้อมูล Monday
 		System.out.print(day) //{Mon=Monday,}
-		day.containKey("Mon"); //เช็คว่าใน map มี key ชื่อ Mon มั้ย
-		day.containValue("Monday"); //เข็คว่าใน map มี value ชื่อ Monday มั้ย
+		day.containsKey("Mon"); //เช็คว่าใน map มี key ชื่อ Mon มั้ย
+		day.containsValue("Monday"); //เข็คว่าใน map มี value ชื่อ Monday มั้ย
 	
 		//ดู key ทั้งหมดของ day
 		for(String x:day.keySet()){

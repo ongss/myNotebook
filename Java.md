@@ -627,7 +627,7 @@ public class Human {
 Human person1 = new Human();
 Human person2 = new Human();
 person1 == person2 // False เพราะว่า person1 กับ person2 เป็นคนละ object กัน ดังนั้นเราจึงค้องสร้างฟังก์ชั่น equal
-person1.equal(person2) // True
+person1.equals(person2) // True
 
 ```
 

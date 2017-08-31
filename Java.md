@@ -148,7 +148,7 @@ n = S.indexOf("-"); // n = 7 เหมือน find ใน python ถ้าไ�
 n = S.indexOf("o",7); // n = 9 เริ่มหา o ตั้งแต่ช่องที่ 7
 
 boolean b = S.contains("or"); // b = true
-b = S.equls("Hello World"); // b = false 
+b = S.equals("Hello World"); // b = false 
 
 if(S.compareTo(t) == 0) // S == t
 if(S.compareTo(t) < 0) // S < t

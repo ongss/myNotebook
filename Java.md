@@ -169,6 +169,7 @@ char c = S.charAt(6); // c = o
 ### array
 เป็นรูปแบบการเก็บข้อมูลที่มีรูปแบบเป็นช่องมาต่อๆกัน วิธีการเรียกข้อมูลออกมาจะต้องใช้เลขช่องของ array เช่น <code>a[3]</code> (array a ช่องที่ 3) โดยการสร้าง array จะต้องประกาศขนาดและชนิดของตัวแปรเอาไว้ตั้งแต่แรก
 ```java
+import java.util.Arrays; //เวลาใช้ Arrays.mathod
 // การประกาศ array 
 int[] n = new int[10]; //ประกาศ array n เป็นชนิด int ขนาด 10 ช่อง ตั้งแต่ช่องที่ 0 ถึง 9
 // ลองใส่ค่าลงไปใน array
@@ -197,7 +198,7 @@ for(int[] row:x)    //for row in x:
        //e;
 System.out.println(x[0][0]); // 1 
 System.out.println(x[0][1]); // 2
-System.out.println(Arrays.deepToString(x)); // [[1,2,3],[4,5,6],[7,8,9]]
+System.out.println(Arrays.deepToString(x)); // [[1,2,3],[4,5,6],[7,8,9]] 
 
 ```
 >Note : เวลาการข้าถึงข้อมูลใน array ใช้ O(1) เช่น a[1] แต่ใช้เวลาในการแทรกข้อมูล O(n) ถ้าจะแทรกช่องที่ m จะต้องขยับข้อมูลช่องที่ m ถึง n ไปหนึ่งช่อง

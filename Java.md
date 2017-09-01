@@ -692,6 +692,12 @@ public class Human {
 	}
 }
 
+public class Hero extends Human {
+	static void sayHi(){
+		System.out.println("hero");
+	}
+}
+
 // ตัวแปร static
 Human person1 = new Human();
 Human person2 = new Human();
@@ -703,6 +709,10 @@ System.out.println(person2.name); // eiei
 
 // ฟังก์ชั่น static
 Human.sayHi(); // Hello, my name is John Smith
+
+Human hero = new Hero();
+hero.sayhi() // Hello, my name is John Smith
+// เพราะว่า static จำทำตาม type ที่ประกาศไว้ซึ่งเป็น Human
  
 ```
 
